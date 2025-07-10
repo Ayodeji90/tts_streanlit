@@ -1,5 +1,5 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 streamlit
 TTS==0.22.0
-torch==1.13.1
-torchaudio==0.13.1
+torch==2.1.0
+torchaudio==0.16.0
