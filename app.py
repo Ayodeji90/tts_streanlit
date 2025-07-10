@@ -13,6 +13,9 @@ def main():
 
     st.markdown("""
     <style>
+    body {
+        background-color: #e0f2f7; /* A light, cool blue */
+    }
     .custom-heading {
         color: #4CAF50;
         font-family: 'Arial', sans-serif;
