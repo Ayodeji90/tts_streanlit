@@ -1,7 +1,4 @@
-TTS
-torch
-streamlit==1.46.1
-rich
-markdown
-mdurl
-pygments
+streamlit
+TTS==0.22.0
+torch==1.13.1
+torchaudio==0.13.1
