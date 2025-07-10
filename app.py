@@ -11,6 +11,20 @@ def get_model(model_name):
 def main():
     st.title("Text-to-Speech with Multiple Models")
 
+    st.markdown("""
+    <style>
+    .custom-heading {
+        color: #4CAF50;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        padding: 10px;
+        background-color: #e8f5e9;
+        border-radius: 8px;
+    }
+    </style>
+    <h1 class="custom-heading">Welcome to the TTS App!</h1>
+    """, unsafe_allow_html=True)
+
     # Model selection
     model_map = {
         "Tacotron2": "tts_models/en/ljspeech/tacotron2-DDC",
