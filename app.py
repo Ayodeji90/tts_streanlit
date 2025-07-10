@@ -12,10 +12,19 @@ def main():
     st.title("Text-to-Speech with Multiple Models")
 
     # Model selection
-    model_choice = st.selectbox(
+    model_map = {
+        "Tacotron2": "tts_models/en/ljspeech/tacotron2-DDC",
+        "Fastspeech2": "tts_models/en/ljspeech/fastspeech2",
+        "VITS": "tts_models/en/ljspeech/vits",
+        "TransformerTTS": "tts_models/en/ljspeech/transformer-tts"
+    }
+    display_model_names = list(model_map.keys())
+
+    selected_display_name = st.selectbox(
         "Choose a TTS model",
-        ["tts_models/en/ljspeech/tacotron2-DDC", "tts_models/en/ljspeech/fastspeech2", "tts_models/en/ljspeech/vits", "tts_models/en/ljspeech/transformer-tts"]
+        display_model_names
     )
+    model_choice = model_map[selected_display_name]
 
     # Text input
     text_input = st.text_area("Enter text to synthesize:", "Hello, this is a test.")
