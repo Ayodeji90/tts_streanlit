@@ -69,7 +69,7 @@ def main():
                     audio_filename = f"{uuid.uuid4()}.wav"
                     audio_filepath = os.path.join(AUDIO_DIR, audio_filename)
 
-                    sf.write(audio_filepath, output["audio"], samplerate=output["sampling_rate"])
+                    sf.write(audio_filepath, output["audio"], samplerate=16000)
                     st.audio(audio_filepath, format="audio/wav")
                 else:
                     # Get the model
